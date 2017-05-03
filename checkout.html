@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shine Modyste Boutique</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/utf-latest.min.css'>
+  <!-- Custom CSS -->
+  <link href="css/checkout-page.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <img src="./img/logo.png" alt="Logo SMB" height="50px" width="50px">
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="#">Home</a>
+                  </li>
+                  <li>
+                      <a href="#">Shop</a>
+                  </li>
+                  <li>
+                      <a href="#">Contact Us</a>
+                  </li>
+                  <li>
+                      <a href="#">About</a>
+                  </li>
+                  <li>
+                      <a href="#">Blog</a>
+                  </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+  <!-- Page Content -->
+  <div class="main">
+  <h1>LIST CART</h1>
+  <!-- <h2 class="sub-heading">List Chart</h2> -->
+
+  <section class="shopping-cart">
+    <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
+
+      <script id="shopping-cart--list-item-template" type="text/template">
+        <li class="_grid shopping-cart--list-item">
+          <div class="_column product-image">
+            <img class="product-image--img" src="{{=img}}" alt="Item image" />
+          </div>
+          <div class="_column product-info">
+            <h4 class="product-name">{{=name}}</h4>
+            <p class="product-desc">{{=desc}}</p>
+            <div class="price product-single-price">${{=price}}</div>
+          </div>
+          <div class="_column product-modifiers" data-product-price="{{=price}}">
+            <div class="_grid">
+              <button class="_btn _column product-subtract">&minus;</button>
+              <div class="_column product-qty">0</div>
+              <button class="_btn _column product-plus">&plus;</button>
+            </div>
+            <button class="_btn entypo-trash product-remove">Remove</button>
+            <div class="price product-total-price">$0.00</div>
+          </div>
+        </li>
+      </script>
+
+    </ol>
+
+    <footer class="_grid cart-totals">
+      <div class="_column subtotal" id="subtotalCtr">
+        <div class="cart-totals-key">Subtotal</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column shipping" id="shippingCtr">
+        <div class="cart-totals-key">Shipping</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column taxes" id="taxesCtr">
+        <div class="cart-totals-key">Taxes (6%)</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column total" id="totalCtr">
+        <div class="cart-totals-key">Total</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column checkout">
+        <button class="_btn checkout-btn entypo-forward">Checkout</button>
+      </div>
+    </footer>
+
+  </section>
+  </div>
+
+    <!-- /.container -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <footer class="style_footer">
+      <h5>copyright &copy; 2017 by Uci Arahito Lubis</h5>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
